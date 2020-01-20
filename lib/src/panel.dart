@@ -221,7 +221,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel> with SingleTickerProvid
         widget.body != null ? Positioned(
           top: widget.parallaxEnabled ? _getParallax() : 0.0,
           child: Container(
-            height: MediaQuery.of(context).size.height - _ac.value,
+            height: MediaQuery.of(context).size.height - _getParallax(),
             width: MediaQuery.of(context).size.width,
             child: widget.body,
           ),
